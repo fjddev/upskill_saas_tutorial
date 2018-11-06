@@ -3,7 +3,9 @@
     <h3 class="text-center">Contact Page</h3>
     <div class="col-md-4 col-md-offset-4">
       <div class="well">
-        <%= form_for "/contacts" do |f| %>
+        <%= flash[:notice] %>
+        <!--Form uses @contact object -->
+        <%= form_for @contact do |f| %>
          <div class="form-group">
            <%= f.label :name %>
            <%= f.text_field :name, class: 'form-control' %>
