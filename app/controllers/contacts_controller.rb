@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
     
     private 
        def contact_params
+        #   Strong parameters
            params.require(:contact).permit(:name, :email, :comments)
        end
     
